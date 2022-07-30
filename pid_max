@@ -1,2 +1,2 @@
 #!/bin/bash
-# pstree -p | grep "apache2" | head -1
+pstree -p | grep "apache2" | head -1
