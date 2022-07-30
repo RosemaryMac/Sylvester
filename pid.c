@@ -7,9 +7,9 @@
  */
 int main(void)
 {
-	pid_t my_pid;
+	pid_t r_pid;
 
-	my_pid = getpid();
-	printf("%u\n", my_pid);
+	r_pid = getpid();
+	printf("%u\n", r_pid);
 	return (0);
 }
