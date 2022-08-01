@@ -2,16 +2,16 @@
 
 /**
  * main - prints all arguments without using ac
- * @ac: number of arguments in av
+ * @args: number of arguments in av
  * @av: array of strings (arguments)
  * Return: Always 0.
  */
-int main(int ac, char **av)
+int main(int args, char *av[])
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; i < ac; i++)
-		printf("av[%2s]: %s\n", av[i]);
+	for (i = 0; i < args; i++)
+		printf("%s\n", av[i]);
 
 	return (0);
 
