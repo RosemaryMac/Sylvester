@@ -2,18 +2,23 @@
 #include <unistd.h>
 
 /**
- * main - Entry point
- * wait - takes the address of an uninitialized integer
- *        as an argument
- * child - name of a process
- * Return: Always 0.
+ *  - Entry point
+ * 
+ * Return:
  */
-int main(void)
+int takeInput(char* str)
 {
-	int wait child;
+	char* buf;
 
-	else
+	buf = readline("\n>>> ");
+	if (strlen(buf) !=0)
 	{
-		wait(&wait_child);
+		add_history(buf);
+		strcpy(str, buf);
 		return (0);
 	}
+	else
+	{
+		return (1);
+	}
+}
