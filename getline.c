@@ -6,6 +6,7 @@
  * wait - takes the address of an uninitialized integer
  *        as an argument
  * child - name of a process
+ * Return: Always 0.
  */
 int main(void)
 {
@@ -13,5 +14,6 @@ int main(void)
 
 	else
 	{
-		wait (&wait_child);
+		wait(&wait_child);
+		return (0);
 	}
