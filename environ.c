@@ -4,15 +4,18 @@
  * main -Entry point
  * @argc: argument count
  * @argv: argument vector
- * @envp: environment variables pointer
+ * @environ: environment variables pointer
  * Return: Always 0.
  */
-int main(int argc, char *argv[], char *envp[])
-{
-	int i;
+extern char **environ;
 
-	for (i = 0; envp[i] != NULL; i++)
-		printf("\n%s", envp[i]);
-	getchar();
+int main()
+{
+	char **s = environ;
+	
+	for (; *s; s++)
+	{
+		printf("\n%s", *s);
+	}
 	return (0);
 }
